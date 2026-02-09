@@ -61,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:text="Shizuku: "
                     android:textSize="14sp"
-                    android:textColor="@color/text_secondary" />
+                    android:textColor="@color/text_primary" />
 
                 <TextView
                     android:id="@+id/shizukuStatus"
@@ -69,7 +69,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
 
                 <Button
                     android:id="@+id/shizukuPermissionBtn"
@@ -94,7 +95,7 @@
                     android:layout_height="wrap_content"
                     android:text="无障碍: "
                     android:textSize="14sp"
-                    android:textColor="@color/text_secondary" />
+                    android:textColor="@color/text_primary" />
 
                 <TextView
                     android:id="@+id/accessibilityStatus"
@@ -102,7 +103,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
 
                 <Button
                     android:id="@+id/accessibilityPermissionBtn"
@@ -120,7 +122,7 @@
                     android:layout_height="wrap_content"
                     android:text="禁用"
                     android:textSize="13sp"
-                    android:textColor="@color/text_secondary" />
+                    android:textColor="@color/text_primary" />
             </LinearLayout>
 
             <LinearLayout
@@ -134,7 +136,7 @@
                     android:layout_height="wrap_content"
                     android:text="悬浮窗: "
                     android:textSize="14sp"
-                    android:textColor="@color/text_secondary" />
+                    android:textColor="@color/text_primary" />
 
                 <TextView
                     android:id="@+id/overlayStatus"
@@ -142,7 +144,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
 
                 <Button
                     android:id="@+id/overlayPermissionBtn"
@@ -178,7 +181,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="开启后将通过 Root 权限自动启动 Shizuku，无需手动操作"
+                android:text="开启后通过 Root 权限以正确身份 (shell) 自动启动 Shizuku，并在 Shizuku 不可用时提供后备操作"
                 android:textSize="13sp"
                 android:textColor="@color/text_secondary"
                 android:layout_marginBottom="8dp" />
