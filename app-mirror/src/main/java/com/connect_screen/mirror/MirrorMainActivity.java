@@ -26,7 +26,6 @@ import com.connect_screen.mirror.job.AutoRotateAndScaleForDisplaylink;
 import com.connect_screen.mirror.job.CreateVirtualDisplay;
 import com.connect_screen.mirror.job.ExitAll;
 import com.connect_screen.mirror.job.InputRouting;
-import com.connect_screen.mirror.job.RootShizukuStarter;
 import com.connect_screen.mirror.shizuku.ShizukuUtils;
 
 import org.lsposed.hiddenapibypass.HiddenApiBypass;
@@ -116,10 +115,7 @@ public class MirrorMainActivity extends AppCompatActivity implements IMainActivi
             Pref.doNotAutoStartMoonlight = doNotAutoStartMoonlight;
         }
 
-        // 自动检测 Root：如果设备有 Root，自动修复 Shizuku 身份并启动
         AcquireShizuku.fixRootShizuku();
-        RootShizukuStarter.startShizukuViaRoot();
-
         if (!Pref.getDisableAccessibility()) {
             ensureAccessiblityServiceStarted();
         }

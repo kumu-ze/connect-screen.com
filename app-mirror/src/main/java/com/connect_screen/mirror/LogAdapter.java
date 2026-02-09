@@ -20,8 +20,8 @@ public class LogAdapter extends RecyclerView.Adapter<LogAdapter.LogViewHolder> {
     @Override
     public LogViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         TextView textView = new TextView(parent.getContext());
-        textView.setTextSize(12);
-        textView.setTextColor(0xFF4B5563); // darker gray for readability
+        textView.setTextSize(11);
+        textView.setTextColor(0xFF6B7280); // text_secondary
         textView.setPadding(0, 2, 0, 2);
         textView.setLayoutParams(new ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,

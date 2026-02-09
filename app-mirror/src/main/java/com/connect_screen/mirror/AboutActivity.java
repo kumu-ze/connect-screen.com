@@ -27,7 +27,6 @@ public class AboutActivity extends AppCompatActivity {
         
         TextView aboutContent = findViewById(R.id.aboutContent);
         aboutContent.setText(
-        "代码修改者：kumu-ze (GitHub: github.com/kumu-ze)\n\n" +
         "本应用使用了开源软件 sunshine（https://github.com/LizardByte/Sunshine） 的源代码。\n\n" +     
         "本应用使用了DisplayLink®的驱动程序(.so文件)用于支持DisplayLink®设备的连接功能。DisplayLink®是Synaptics Incorporated的注册商标。我们仅将其驱动程序用于实现与DisplayLink®设备的兼容性，未对驱动程序进行任何修改。\n\n" +
                 "- DisplayLink®驱动程序的所有权利均属于Synaptics Incorporated\n" +

@@ -1,106 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/bg_primary"
+    android:fitsSystemWindows="true">
 
-    <TextView
-        android:id="@+id/header"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="软件使用方法请查看短视频平台介绍或访问 connect-screen.com 。屏连入口是扩展投屏模式，屏易连入口是镜像投屏模式。"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:layout_marginBottom="16dp"/>
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/versionText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="版本："
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="8dp"/>
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关于"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="16dp" />
 
-    <TextView
-        android:id="@+id/qqLink"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="最新版本：从QQ群 “安卓屏连” 获取"
-        android:textSize="16sp"
-        android:textColor="@color/blue"
-        android:layout_marginTop="16dp"
-        android:clickable="true"/>
+        <!-- 应用信息卡片 -->
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_marginBottom="12dp"
+            android:elevation="2dp">
 
-    <TextView
-        android:id="@+id/websiteLink"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="官网：connect-screen.com"
-        android:textSize="16sp"
-        android:textColor="@color/blue"
-        android:layout_marginTop="16dp"
-        android:clickable="true"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="屏易连 Connect Screen"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:layout_marginBottom="6dp" />
 
-    <TextView
-        android:id="@+id/xiaohongshuLink"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="小红书：安卓屏连"
-        android:textSize="16sp"
-        android:textColor="@color/blue"
-        android:layout_marginTop="16dp"
-        android:clickable="true"
-        android:autoLink="web"/>
+            <TextView
+                android:id="@+id/versionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="版本："
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="4dp" />
 
-    <TextView
-        android:id="@+id/bilibiliLink"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="b站：屏易连"
-        android:textSize="16sp"
-        android:textColor="@color/blue"
-        android:layout_marginTop="8dp"
-        android:clickable="true"
-        android:autoLink="web"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="v2.0 代码修改者：kumu-ze"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="8dp" />
 
-    <TextView
-        android:id="@+id/douyinLink"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="抖音：安卓屏连"
-        android:textSize="16sp"
-        android:textColor="@color/blue"
-        android:layout_marginTop="8dp"
-        android:clickable="true"
-        android:autoLink="web"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="软件使用方法请查看短视频平台介绍或访问 connect-screen.com\n屏连入口是扩展投屏模式，屏易连入口是镜像投屏模式。"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:lineSpacingExtra="3dp" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/youtubeLink"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Youtube: 安卓屏连"
-        android:textSize="16sp"
-        android:textColor="@color/blue"
-        android:layout_marginTop="8dp"
-        android:clickable="true"
-        android:autoLink="web"/>
+        <!-- 联系方式卡片 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/settings_card_bg"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:elevation="1dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系方式"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="12dp" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="16dp"/>
+            <TextView
+                android:id="@+id/qqLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📱 QQ群：安卓屏连 (577902537)"
+                android:textSize="15sp"
+                android:textColor="@color/primary"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:clickable="true" />
 
-    <TextView
-        android:id="@+id/aboutContent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textColor="@color/text_primary" />
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" />
 
-</LinearLayout> 
+            <TextView
+                android:id="@+id/websiteLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🌐 官网：connect-screen.com"
+                android:textSize="15sp"
+                android:textColor="@color/primary"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:clickable="true" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" />
+
+            <TextView
+                android:id="@+id/xiaohongshuLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📕 小红书：安卓屏连"
+                android:textSize="15sp"
+                android:textColor="@color/primary"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:clickable="true" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" />
+
+            <TextView
+                android:id="@+id/bilibiliLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📺 B站：屏易连"
+                android:textSize="15sp"
+                android:textColor="@color/primary"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:clickable="true" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" />
+
+            <TextView
+                android:id="@+id/douyinLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🎵 抖音：安卓屏连"
+                android:textSize="15sp"
+                android:textColor="@color/primary"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:clickable="true" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" />
+
+            <TextView
+                android:id="@+id/youtubeLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="▶️ YouTube：安卓屏连"
+                android:textSize="15sp"
+                android:textColor="@color/primary"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:clickable="true" />
+        </LinearLayout>
+
+        <!-- 声明卡片 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/settings_card_bg"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:elevation="1dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开源声明"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/aboutContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:lineSpacingExtra="3dp" />
+        </LinearLayout>
+
+        <!-- 致谢 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/settings_card_bg"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="1dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="致谢"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="v2.0 代码修改：kumu-ze\n原始项目：taowen/connect-screen\n串流核心：LizardByte/Sunshine\nRoot管理：topjohnwu/libsu\n权限框架：RikkaApps/Shizuku\nX11服务：termux/termux-x11"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:lineSpacingExtra="4dp" />
+        </LinearLayout>
+
+    </LinearLayout>
 </ScrollView>

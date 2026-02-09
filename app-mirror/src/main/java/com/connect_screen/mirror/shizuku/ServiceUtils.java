@@ -26,7 +26,6 @@ import com.connect_screen.mirror.FloatingButtonService;
 import com.connect_screen.mirror.Pref;
 import com.connect_screen.mirror.State;
 import com.connect_screen.mirror.job.BindAllExternalInputToDisplay;
-import com.connect_screen.mirror.job.RootShizukuStarter;
 
 import dev.rikka.tools.refine.Refine;
 import rikka.shizuku.ShizukuBinderWrapper;
@@ -153,17 +152,6 @@ public class ServiceUtils {
         } catch (Exception e) {
             if (ShizukuUtils.hasPermission()) {
                 launchAppWithShizuku(packageName, context, targetDisplayId);
-            } else if (Pref.getUseRootMode() && RootShizukuStarter.isDeviceRooted()) {
-                // Root 后备方案：通过 am start --display 启动
-                State.log("Shizuku 不可用，尝试通过 Root 启动应用...");
-                boolean success = RootShizukuStarter.startActivityOnDisplayViaRoot(packageName, targetDisplayId);
-                if (success) {
-                    State.log("Root 模式启动应用成功: " + packageName);
-                    State.startNewJob(new BindAllExternalInputToDisplay(targetDisplayId));
-                } else {
-                    Toast.makeText(context, "Root 启动应用失败", Toast.LENGTH_SHORT).show();
-                    State.log("Root 启动应用失败: " + packageName);
-                }
             } else {
                 Toast.makeText(context, "启动应用失败，该屏幕需要 shizuku 授权", Toast.LENGTH_SHORT).show();
                 State.log("启动应用失败，该屏幕需要 shizuku 授权: " + e);
@@ -312,13 +300,6 @@ public class ServiceUtils {
         } catch (Exception e) {
             if (ShizukuUtils.hasPermission()) {
                 launchActivityWithShizuku(context, activityClass, targetDisplayId);
-            } else if (Pref.getUseRootMode() && RootShizukuStarter.isDeviceRooted()) {
-                // Root 后备：尝试普通方式
-                try {
-                    launchActivityNormally(context, activityClass, targetDisplayId);
-                } catch (Exception e2) {
-                    State.log("Root 模式启动 Activity 失败: " + e2.getMessage());
-                }
             } else {
                 State.log("启动 Activity 失败: " + e.getMessage());
             }

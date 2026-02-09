@@ -25,8 +25,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="修改在下次应用启动才生效"
-            android:textSize="14sp"
-            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:textColor="@color/text_hint"
             android:layout_marginBottom="16dp" />
 
         <!-- 权限状态卡片 -->
@@ -61,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:text="Shizuku: "
                     android:textSize="14sp"
-                    android:textColor="@color/text_primary" />
+                    android:textColor="@color/text_secondary" />
 
                 <TextView
                     android:id="@+id/shizukuStatus"
@@ -69,8 +69,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/text_primary" />
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/shizukuPermissionBtn"
@@ -95,7 +95,7 @@
                     android:layout_height="wrap_content"
                     android:text="无障碍: "
                     android:textSize="14sp"
-                    android:textColor="@color/text_primary" />
+                    android:textColor="@color/text_secondary" />
 
                 <TextView
                     android:id="@+id/accessibilityStatus"
@@ -103,8 +103,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/text_primary" />
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/accessibilityPermissionBtn"
@@ -122,7 +122,7 @@
                     android:layout_height="wrap_content"
                     android:text="禁用"
                     android:textSize="13sp"
-                    android:textColor="@color/text_primary" />
+                    android:textColor="@color/text_secondary" />
             </LinearLayout>
 
             <LinearLayout
@@ -136,7 +136,7 @@
                     android:layout_height="wrap_content"
                     android:text="悬浮窗: "
                     android:textSize="14sp"
-                    android:textColor="@color/text_primary" />
+                    android:textColor="@color/text_secondary" />
 
                 <TextView
                     android:id="@+id/overlayStatus"
@@ -144,8 +144,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/text_primary" />
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/overlayPermissionBtn"

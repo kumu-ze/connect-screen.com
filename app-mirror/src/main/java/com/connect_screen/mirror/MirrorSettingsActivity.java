@@ -30,7 +30,6 @@ import com.connect_screen.mirror.job.ConnectToClient;
 import com.connect_screen.mirror.job.SunshineServer;
 import com.connect_screen.mirror.shizuku.PermissionManager;
 import com.connect_screen.mirror.shizuku.ShizukuUtils;
-import com.topjohnwu.superuser.Shell;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -342,7 +341,6 @@ public class MirrorSettingsActivity extends AppCompatActivity {
         disableRemoteSubmixCheckbox.setOnCheckedChangeListener((buttonView, isChecked) -> {
             preferences.edit().putBoolean(Pref.KEY_DISABLE_REMOTE_SUBMIX, isChecked).apply();
         });
-
     }
 
     @Override
