@@ -159,52 +159,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Root 模式卡片 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/settings_card_bg"
-            android:orientation="vertical"
-            android:padding="16dp"
-            android:layout_marginBottom="12dp"
-            android:elevation="1dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Root 模式"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:textColor="@color/text_primary"
-                android:layout_marginBottom="4dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="开启后通过 Root 权限以正确身份 (shell) 自动启动 Shizuku，并在 Shizuku 不可用时提供后备操作"
-                android:textSize="13sp"
-                android:textColor="@color/text_secondary"
-                android:layout_marginBottom="8dp" />
-
-            <CheckBox
-                android:id="@+id/useRootModeCheckbox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="启用 Root 模式（需要设备已 Root）"
-                android:textSize="14sp"
-                android:textColor="@color/text_primary"
-                android:padding="6dp" />
-
-            <TextView
-                android:id="@+id/rootStatus"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:textColor="@color/text_secondary"
-                android:layout_marginTop="4dp"
-                android:paddingStart="6dp" />
-        </LinearLayout>
-
         <!-- 投屏模式卡片 -->
         <LinearLayout
             android:layout_width="match_parent"

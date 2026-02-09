@@ -118,8 +118,15 @@ public class Pref {
         return getBoolean(KEY_DISABLE_REMOTE_SUBMIX, false);
     }
 
+    /**
+     * Root 模式改为自动检测：有 Root 就自动用，无需手动开启
+     */
     public static boolean getUseRootMode() {
-        return getBoolean(KEY_USE_ROOT_MODE, false);
+        try {
+            return com.topjohnwu.superuser.Shell.getShell().isRoot();
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     private static String getString(String key, String defaultValue) {

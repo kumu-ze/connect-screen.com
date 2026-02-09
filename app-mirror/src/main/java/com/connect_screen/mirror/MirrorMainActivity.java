@@ -116,12 +116,9 @@ public class MirrorMainActivity extends AppCompatActivity implements IMainActivi
             Pref.doNotAutoStartMoonlight = doNotAutoStartMoonlight;
         }
 
+        // 自动检测 Root：如果设备有 Root，自动修复 Shizuku 身份并启动
         AcquireShizuku.fixRootShizuku();
-
-        // Root 模式：如果开启了 Root 模式且 Shizuku 未启动，尝试通过 Root 自动启动
-        if (Pref.getUseRootMode()) {
-            RootShizukuStarter.startShizukuViaRoot();
-        }
+        RootShizukuStarter.startShizukuViaRoot();
 
         if (!Pref.getDisableAccessibility()) {
             ensureAccessiblityServiceStarted();

@@ -343,35 +343,6 @@ public class MirrorSettingsActivity extends AppCompatActivity {
             preferences.edit().putBoolean(Pref.KEY_DISABLE_REMOTE_SUBMIX, isChecked).apply();
         });
 
-        // Root 模式设置
-        CheckBox useRootModeCheckbox = findViewById(R.id.useRootModeCheckbox);
-        TextView rootStatus = findViewById(R.id.rootStatus);
-        boolean useRootMode = Pref.getUseRootMode();
-        useRootModeCheckbox.setChecked(useRootMode);
-        
-        // 检查 Root 状态并显示
-        new Thread(() -> {
-            boolean isRooted = false;
-            try {
-                isRooted = Shell.getShell().isRoot();
-            } catch (Exception e) {
-                // ignore
-            }
-            final boolean rooted = isRooted;
-            runOnUiThread(() -> {
-                if (rooted) {
-                    rootStatus.setText("✅ 已检测到 Root 权限");
-                    rootStatus.setTextColor(getResources().getColor(R.color.success));
-                } else {
-                    rootStatus.setText("⚠ 未检测到 Root 权限，Root 模式将不可用");
-                    rootStatus.setTextColor(getResources().getColor(R.color.warning));
-                }
-            });
-        }).start();
-
-        useRootModeCheckbox.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            preferences.edit().putBoolean(Pref.KEY_USE_ROOT_MODE, isChecked).apply();
-        });
     }
 
     @Override
