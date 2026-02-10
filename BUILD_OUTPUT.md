@@ -43,7 +43,8 @@ git submodule update --init --recursive
 
 ## 说明 / Notes
 
-- 预构建的 APK 从 `app-mirror-v2.0.0.zip` 提取
-- Pre-built APK extracted from `app-mirror-v2.0.0.zip`
+- 预构建的 APK 从仓库根目录的 `app-mirror-v2.0.0.zip` 文件中提取（该文件已包含在仓库中）
+- Pre-built APK extracted from `app-mirror-v2.0.0.zip` in the repository root (this file is included in the repository)
 - 这是调试版本，包含调试符号
 - This is a debug build with debug symbols
+- MD5: 1ebd3f3e97ed049ec6ba568803deaf3f
